@@ -1,9 +1,15 @@
-## ⏳ ADsP 시험까지: **34일 8시간 56분**
+Hi, this is Su. <br>
+I am a newbie to GitHub. <br>
+Learning how to use this.
 
-<!--
-**suuukkimm/suuukkimm** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
-Here are some ideas to get you started:
+| ## 📌 ADsP 시험 Countdown |  
+|---------------------|
+⏳ 시험까지: **34일 8시간 56분** |
+<br> <br>
+
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=suuukkimm)](https://github.com/anuraghazra/github-readme-stats)
+
 
 - 🔭 I’m currently working on ... AI서비스기획 부트캠프
 - 🌱 I’m currently learning ... AI서비스기획
@@ -13,6 +19,3 @@ Here are some ideas to get you started:
 - 📫 How to reach me: ... 
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
--->
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=suuukkimm)](https://github.com/anuraghazra/github-readme-stats)
-
