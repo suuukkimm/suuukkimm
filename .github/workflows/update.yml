@@ -5,6 +5,9 @@ on:
     - cron: "0 * * * *"   # 매시 정각마다 실행 (원하면 하루 1번으로 줄일 수도 있음)
   workflow_dispatch:       # 수동 실행 가능
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
