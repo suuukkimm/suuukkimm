@@ -24,10 +24,10 @@ jobs:
       - name: Run countdown update
         run: python update_countdown.py
 
-      - name: Commit and push changes
+        - name: Commit and push changes
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add README.md
-          git commit -m "Update countdown"
+          git commit -m "Update countdown" || echo "No changes to commit"
           git push
