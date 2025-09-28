@@ -1,7 +1,4 @@
-## Hi there 👋
-
-## ⏳ ADsP 시험까지:
- **34일 8시간 56분**
+## ⏳ ADsP 시험까지: **34일 8시간 56분**
 
 <!--
 **suuukkimm/suuukkimm** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
