@@ -1,11 +1,14 @@
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 import sys
 
-# 목표 날짜 (ADsP 시험)
-target_date = datetime(2025, 11, 2, 0, 0, 0)
+# 한국 시간대 (UTC+9)
+KST = timezone(timedelta(hours=9))
 
-# 현재 UTC 기준 시간
-now = datetime.utcnow()
+# 목표 날짜 (ADsP 시험, 한국 시간 기준 자정)
+target_date = datetime(2025, 11, 2, 0, 0, 0, tzinfo=KST)
+
+# 현재 시간 (한국 시간)
+now = datetime.now(KST)
 
 # 남은 시간 계산
 delta = target_date - now
