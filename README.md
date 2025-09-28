@@ -3,7 +3,7 @@ I am a newbie to GitHub. <br>
 Learning how to use this.
 
 
-| ## 📌 ADsP 시험 Countdown |  
+| 📌 ADsP 시험 Countdown |  
 |---------------------|
 ⏳ 시험까지: **34일 8시간 56분** |
 <br> <br>
