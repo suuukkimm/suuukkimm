@@ -2,7 +2,7 @@ name: Update Countdown
 
 on:
   schedule:
-    - cron: "0 * * * *"   # 매시 정각마다 실행 (원하면 하루 1번으로 줄일 수도 있음)
+    - cron: "0 * * * *"   # 매 시 정각 실행
   workflow_dispatch:       # 수동 실행 가능
 
 permissions:
@@ -24,10 +24,9 @@ jobs:
       - name: Run countdown update
         run: python update_countdown.py
 
-        - name: Commit and push changes
+      - name: Commit and push changes
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git add README.md
-          git commit -m "Update countdown" || echo "No changes to commit"
-          git push
+          git diff --cached --quiet && echo "No changes to commit" || (git commit -m "Update countdown" && git push)
