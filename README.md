@@ -5,7 +5,7 @@ Learning how to use this.
 
 | 📌 ADsP 시험 Countdown |  
 |---------------------|
-| ⏳ 시험까지: **34일 7시간 53분** |
+| ⏳ 시험까지: **{{COUNTDOWN}}** |
 
 <br>
 
