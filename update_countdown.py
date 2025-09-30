@@ -1,10 +1,11 @@
 from datetime import datetime, timedelta, timezone
 import sys
+import re
 
 # 한국 시간대 (UTC+9)
 KST = timezone(timedelta(hours=9))
 
-# 목표 날짜 (ADsP 시험, 한국 시간 자정)
+# 목표 날짜 (ADsP 시험, 한국 시간 기준 자정)
 target_date = datetime(2025, 11, 2, 0, 0, 0, tzinfo=KST)
 
 # 현재 시간 (한국 시간)
@@ -19,16 +20,14 @@ if days >= 0:
 else:
     countdown_text = f"D+{abs(days)}"  # 시험일 지났을 경우
 
-# README.md 수정
+pattern = r"<!--COUNTDOWN-->.*?<!--/COUNTDOWN-->"
+
 try:
     with open("README.md", "r", encoding="utf-8") as f:
         content = f.read()
 
-    if "{{COUNTDOWN}}" not in content:
-        print("⚠️ README.md 안에 {{COUNTDOWN}}가 없습니다. 수정하지 않았습니다.")
-        sys.exit(0)
-
-    new_content = content.replace("{{COUNTDOWN}}", countdown_text)
+    # HTML 코멘트 영역 안을 새로운 countdown_text로 교체
+    new_content = re.sub(pattern, f"<!--COUNTDOWN-->{countdown_text}<!--/COUNTDOWN-->", content)
 
     if new_content != content:
         with open("README.md", "w", encoding="utf-8") as f:

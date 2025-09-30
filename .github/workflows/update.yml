@@ -2,7 +2,7 @@ name: Update Countdown
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # 매일 자정(한국시간 기준 아님, UTC 자정) 실행
+    - cron: "0 15 * * *"   # 한국 자정(KST 00:00)에 실행 (UTC+9 보정)
   workflow_dispatch:       # 수동 실행도 가능
 
 permissions:
