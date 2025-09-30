@@ -7,9 +7,6 @@ Learning how to use this.
 |---------------------|
 <<<<<<< HEAD
 | ⏳ 시험까지: **<!--COUNTDOWN-->D-33<!--/COUNTDOWN-->** |
-=======
-| ⏳ 시험까지: **D-33** |
->>>>>>> 30067ab6c1b693abedeb4f9bffd8a6965aa719a1
 
 <br>
 
