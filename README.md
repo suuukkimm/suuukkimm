@@ -5,7 +5,6 @@ Learning how to use this.
 
 | 📌 ADsP 시험 Countdown |  
 |---------------------|
-<<<<<<< HEAD
 | ⏳ 시험까지: **<!--COUNTDOWN-->D-33<!--/COUNTDOWN-->** |
 
 <br>
