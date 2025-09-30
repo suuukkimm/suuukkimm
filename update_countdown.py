@@ -4,20 +4,20 @@ import sys
 # 한국 시간대 (UTC+9)
 KST = timezone(timedelta(hours=9))
 
-# 목표 날짜 (ADsP 시험, 한국 시간 기준 자정)
+# 목표 날짜 (ADsP 시험, 한국 시간 자정)
 target_date = datetime(2025, 11, 2, 0, 0, 0, tzinfo=KST)
 
 # 현재 시간 (한국 시간)
 now = datetime.now(KST)
 
-# 남은 시간 계산
-delta = target_date - now
-
+# 남은 일수 (D-Day)
+delta = target_date.date() - now.date()
 days = delta.days
-hours, remainder = divmod(delta.seconds, 3600)
-minutes, _ = divmod(remainder, 60)
 
-countdown_text = f"{days}일 {hours}시간 {minutes}분"
+if days >= 0:
+    countdown_text = f"D-{days}"
+else:
+    countdown_text = f"D+{abs(days)}"  # 시험일 지났을 경우
 
 # README.md 수정
 try:
@@ -35,7 +35,7 @@ try:
             f.write(new_content)
         print(f"✅ README.md 업데이트 완료: {countdown_text}")
     else:
-        print("ℹ️ 변경 사항 없음 (같은 카운트다운)")
+        print("ℹ️ 변경 사항 없음")
 except FileNotFoundError:
     print("❌ README.md 파일을 찾을 수 없습니다.")
     sys.exit(1)
